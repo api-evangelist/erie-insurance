@@ -1,7 +1,11 @@
 aid: erie-insurance
-url: https://raw.githubusercontent.com/api-evangelist/erie-insurance/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/erie-insurance/refs/heads/main/apis.yml
 modified: '2026-03-21'
 apis: []
 common:
   - type: Website
     url: https://www.erie-insurance.com
+description: >-
+  Erie Insurance is a property and casualty insurance company that offers auto, home,
+  business, and life insurance through independent agents in multiple U.S. states.
