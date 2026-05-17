@@ -6,7 +6,7 @@ description: >-
   insurance company headquartered in Erie, Pennsylvania. The company offers auto,
   home, business, and life insurance products through a network of independent
   agents across multiple U.S. states.
-type: Contract
+kind: contract
 position: Consumer
 access: 3rd-Party
 tags:
