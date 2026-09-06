@@ -1,0 +1,38 @@
+generated: '2026-09-06'
+method: probed
+source: >-
+  DNS + HTTP probes of status.erieinsurance.com and erieinsurance.statuspage.io, plus a search of the
+  published sitemap for a versioning, deprecation or SLA page
+versioning:
+  scheme: none-published
+  note: No API versioning scheme is published; there is no public API reference to version.
+deprecation:
+  policy_published: false
+  sunset_header: unknown
+  deprecation_header: unknown
+  note: >-
+    No deprecation or sunset policy is published, and no RFC 8594 Sunset/Deprecation header could be
+    observed because no anonymous Erie API response is reachable.
+sla:
+  published: false
+status_page:
+  present: false
+  note: >-
+    Erie Insurance operates no public status page. status.erieinsurance.com does not resolve (NXDOMAIN),
+    and erieinsurance.statuspage.io is not a provisioned Statuspage — it 302s to Atlassian's Statuspage
+    marketing page at https://www.atlassian.com/software/statuspage, which is a soft-404, not a status
+    page. No StatusPage pointer is emitted.
+deprecated_operations: []
+note: >-
+  Everything in this file is a checked zero. Erie publishes no API contract, so there is no lifecycle
+  policy to record; this artifact records that the lifecycle surfaces were probed and found absent.
+evidence:
+- url: https://status.erieinsurance.com
+  status: 0
+  finding: NXDOMAIN
+- url: https://erieinsurance.statuspage.io
+  status: 302
+  finding: redirects to https://www.atlassian.com/software/statuspage — unprovisioned, soft-404
+- url: https://www.erieinsurance.com/sitemap.xml
+  status: 200
+  finding: no versioning, deprecation, SLA or status page among 6,110 URLs

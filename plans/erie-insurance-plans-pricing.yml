@@ -1,0 +1,23 @@
+generated: '2026-09-06'
+method: searched
+source: https://www.erieinsurance.com/sitemap.xml
+plan_count: 0
+plans: []
+note: >-
+  Erie Insurance publishes no API plans, tiers, quotas or developer pricing of any kind. There is no
+  developer portal to price against: the published sitemap carries 6,110 URLs, of which 5,004 are the
+  agency directory, and none is a developer, API, integration or partner-technology page. Erie sells
+  insurance through appointed independent agents, and any commercial terms attached to a systems
+  integration are negotiated inside that agency appointment rather than published. plan_count 0 is a
+  searched finding, not an omission. Consumer insurance product pricing is quoted per risk and is out of
+  scope for an API plans artifact.
+evidence:
+- url: https://www.erieinsurance.com/sitemap.xml
+  status: 200
+  finding: 6,110 URLs; zero developer, API, or partner-technology pages
+- url: https://www.erieinsurance.com/support-center
+  status: 200
+  finding: consumer support center only; no API or developer pricing
+- url: https://developer.erieinsurance.com
+  status: 0
+  finding: NXDOMAIN — no developer portal exists to publish plans on

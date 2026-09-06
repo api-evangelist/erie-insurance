@@ -1,0 +1,19 @@
+generated: '2026-09-06'
+method: searched
+source: https://www.erieinsurance.com/sitemap.xml
+limit_count: 0
+rate_limits: []
+headers: []
+note: >-
+  No rate limits are published. Erie Insurance documents no public API reference, so there is no page
+  stating a quota, window, burst allowance, or the response headers returned on exhaustion. No limits
+  could be observed on a live unauthenticated response either: the one publicly-resolving Erie service
+  host, services.erieinsurance.com, returns an identical SOAP env:Fault to every anonymous request and
+  emits no RateLimit-*, X-RateLimit-* or Retry-After header. limit_count 0 is a checked zero.
+evidence:
+- url: https://www.erieinsurance.com/sitemap.xml
+  status: 200
+  finding: no API reference page in 6,110 URLs
+- url: https://services.erieinsurance.com/
+  status: 500
+  finding: SOAP Fault catch-all; no rate-limit response headers present

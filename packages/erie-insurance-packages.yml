@@ -1,0 +1,55 @@
+generated: '2026-09-06'
+method: searched
+source: >-
+  npm registry search (registry.npmjs.org/-/v1/search?text=erie+insurance), PyPI
+  (pypi.org/pypi/erie-insurance/json, erieinsurance), RubyGems, crates.io, Maven Central, NuGet, and the
+  GitHub organization API for erieinsurance / ErieInsurance
+package_count: 0
+official_package_count: 0
+packages: []
+note: >-
+  No first-party Erie Insurance client library exists in any public package registry. The npm search for
+  "erie insurance" returns only unrelated third-party insurance packages (@emilgroup/insurance-sdk,
+  @socotra/ec-react-schemas, test-nino) with no Erie authorship, and the @erieinsurance npm scope is
+  unclaimed. PyPI, RubyGems, crates.io, Maven Central (com.erieinsurance) and NuGet all 404. There is no
+  Erie Insurance GitHub organization — both erieinsurance and ErieInsurance return 404 from the GitHub
+  orgs API — and a GitHub repository search for "erie insurance" / erieinsurance returns zero
+  first-party repositories. Erie publishes no public developer program, so there is no SDK to publish.
+  Recorded as a checked zero, not an unchecked gap.
+registries_checked:
+- registry: npm
+  endpoint: https://registry.npmjs.org/-/v1/search?text=erie%20insurance
+  status: 200
+  first_party_hits: 0
+- registry: npm
+  endpoint: https://registry.npmjs.org/@erieinsurance%2fsdk
+  status: 404
+  first_party_hits: 0
+- registry: pypi
+  endpoint: https://pypi.org/pypi/erie-insurance/json
+  status: 404
+  first_party_hits: 0
+- registry: pypi
+  endpoint: https://pypi.org/pypi/erieinsurance/json
+  status: 404
+  first_party_hits: 0
+- registry: rubygems
+  endpoint: https://rubygems.org/api/v1/gems/erie-insurance.json
+  status: 404
+  first_party_hits: 0
+- registry: crates.io
+  endpoint: https://crates.io/api/v1/crates/erie-insurance
+  status: 404
+  first_party_hits: 0
+- registry: maven-central
+  endpoint: https://repo1.maven.org/maven2/com/erieinsurance/
+  status: 404
+  first_party_hits: 0
+- registry: nuget
+  endpoint: https://api.nuget.org/v3/registration5-semver1/erieinsurance/index.json
+  status: 404
+  first_party_hits: 0
+- registry: github
+  endpoint: https://api.github.com/orgs/erieinsurance
+  status: 404
+  first_party_hits: 0

@@ -1,0 +1,96 @@
+generated: '2026-09-06'
+method: probed
+source: live HTTP probes of every Erie Insurance host this record knows
+note: >-
+  Every named path in the pipeline path list was probed on the registrable domain, the www host, and the
+  one publicly-resolving Erie service host found in Certificate Transparency
+  (services.erieinsurance.com). www.erieinsurance.com returns a clean, correct 404 for all of them and
+  also 404s a negative-control path that cannot exist, so its answers are trustworthy. erieinsurance.com
+  (apex) 301s every path to www. services.erieinsurance.com is a SOAP CATCH-ALL: it answers HTTP 500
+  with a byte-identical 259-byte SOAP env:Fault ("Internal Error (from client)") for every path
+  requested, including ?wsdl, ?singleWsdl and a control path that cannot exist, so its responses are not
+  documents and none were saved. hit_count is 0. No WellKnown and no SecurityTxt pointer is emitted —
+  this file records an absence, not a presence.
+hit_count: 0
+hosts:
+- host: https://www.erieinsurance.com
+  soft_404_control:
+    path: /.well-known/erie-negative-control-7f3ab91c.json
+    status: 404
+    bytes: 2229
+    verdict: passed — host returns a real 404 for a path that cannot exist
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog.json
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/mcp.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /llms.txt
+    status: 404
+    file: null
+- host: https://erieinsurance.com
+  soft_404_control:
+    path: /.well-known/erie-negative-control-7f3ab91c.json
+    status: 301
+    bytes: 0
+    verdict: apex redirects every path to the www host; probed there instead
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 301
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+    file: null
+  - path: /.well-known/api-catalog
+    status: 301
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 301
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 301
+    file: null
+  - path: /.well-known/agent.json
+    status: 301
+    file: null
+- host: https://services.erieinsurance.com
+  soft_404_control:
+    path: /erie-negative-control-7f3ab91c
+    status: 500
+    bytes: 259
+    verdict: >-
+      FAILED — identical SOAP env:Fault returned for a path that cannot exist. Every response from this
+      host is a catch-all fault, so no status code from it is evidence a document exists.
+  documents:
+  - path: /.well-known/security.txt
+    status: 500
+    file: null
+    note: SOAP Fault catch-all, not a document
