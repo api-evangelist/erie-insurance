@@ -1,7 +1,9 @@
 ---
 title: Insurer conquers change management
 url: https://www.networkworld.com/article/846108/infrastructure-management-insurer-conquers-change-management.html
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Erie Insurance Group" press release artificial intelligence'
 position: 5
 source: serpapi-google

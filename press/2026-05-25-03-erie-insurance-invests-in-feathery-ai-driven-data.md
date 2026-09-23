@@ -1,7 +1,9 @@
 ---
 title: Erie Insurance invests in Feathery, AI-driven data ...
 url: https://www.linkedin.com/posts/cerity-partners-ventures_cvc-strategiccapital-fintech-activity-7394489416150364160-UaUl
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Erie Insurance Group" press release artificial intelligence'
 position: 3
 source: serpapi-google
